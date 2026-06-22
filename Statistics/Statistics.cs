@@ -5,20 +5,20 @@ namespace Statistics
 {
     public class Stats
     {
-        public double average;
-        public double max;
-        public double min;
+        public float average;
+        public float max;
+        public float min;
     }
 
     public class StatsComputer
     {
-        public Stats CalculateStatistics(List<double> numbers)
+        public Stats CalculateStatistics(List<float> numbers)
         {
             var stats = new Stats
             {
-                average = double.NaN,
-                max = double.NaN,
-                min = double.NaN
+                average = float.NaN,
+                max = float.NaN,
+                min = float.NaN
             };
 
             if (numbers == null || numbers.Count == 0)
@@ -26,9 +26,9 @@ namespace Statistics
                 return stats;
             }
 
-            double sum = 0;
-            double max = double.NegativeInfinity;
-            double min = double.PositiveInfinity;
+            float sum = 0;
+            float max = float.NegativeInfinity;
+            float min = float.PositiveInfinity;
 
             foreach (var number in numbers)
             {
